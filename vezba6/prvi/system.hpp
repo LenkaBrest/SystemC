@@ -16,7 +16,7 @@ public:
 
 	system(sc_module_name);
 
-	sc_port<sc_signal_in_if<int> > p0;
+
 	sc_in<bool> gen;
 	sc_out<bool> start;
 	sc_export< sc_fifo<int> > sort_o;

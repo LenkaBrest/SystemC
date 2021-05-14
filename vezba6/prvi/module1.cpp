@@ -9,13 +9,11 @@ namespace comm
 	{
 		nums.bind(buff);
 		cout << name() << " constructed.\n";
-		SC_THREAD(process);
+		SC_METHOD(process);
 	}
 
 	void module1::process()
 	{
-		while(1)
-		{
 			std::vector<int>::iterator it;
 			data.push_back(num0);
 			data.push_back(num1);
@@ -27,7 +25,7 @@ namespace comm
 					buff.nb_write(*it);
 			}
 					
-		}
+		
 	}
 
 }

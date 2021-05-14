@@ -18,7 +18,7 @@ protected:
 	system uut;
 	sc_signal<bool> gen;
 	sc_signal<bool> start;
-	sc_signal<int> res;
+	//sc_signal<int> res;
 
 	void driver();
 	void monitor();

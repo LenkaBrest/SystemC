@@ -13,14 +13,18 @@ namespace comm
 			
 		srand(time(NULL));
 	}
-
+	
 	void module0::process()
 	{
-		if(gen)
+		while(1)
 		{
-			wait((rand()%5+6), SC_NS);
-			num->write(rand()%100);
-			start->write(true);
+			if(gen)
+			{
+				wait((rand()%5+6), SC_NS);
+				num->write(rand()%100);
+				start->write(true);
+			}
+			else wait(5, SC_NS);
 		}
 	}
 }
